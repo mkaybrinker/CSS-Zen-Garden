@@ -11,5 +11,7 @@ From your terminal (in the project directory), run:
 `gulp watch` to continually rebuild the CSS every time you save a .scss file...
 `gulp build` to build your CSS immediately.
 
+On a Mac, ctrl + c will quit your gulp-watch process.
+
 ## Initial installation
 To install your project for the first time, run `npm install` from the terminal (in the project directory). If you wish to clone this repo to multiple computers, you have to run `npm install` on each machine.
