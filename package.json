@@ -4,7 +4,7 @@
   "description": "Styles for High Liner Foodservice Full Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-cli": "^1.4.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.5.2",
