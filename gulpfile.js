@@ -20,7 +20,7 @@ var runSequence = require('run-sequence');
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: ''
     }
   })
 })

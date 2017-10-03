@@ -1,3 +1,2 @@
 node_modules/
-node_modules/.bin/gulp
-node_modules/.bin/user-home
+node_modules/*
