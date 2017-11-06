@@ -5,7 +5,7 @@
 
 1. Do not edit the index.html file, only the .scss files.
 2. The "Zen Garden Base" file is there for reference, but not included in the sass build.
-3. Feel free to add new .scss files, but remember to add them to the style.scss index
+3. Feel free to add new .scss files, but remember to also add them to the style.scss index
 
 From your terminal (in the project directory), run:
 `gulp watch` to continually rebuild the CSS every time you save a .scss file...
