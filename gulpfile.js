@@ -60,31 +60,31 @@ gulp.task('useref', function() {
 });
 
 // Optimizing Images
-gulp.task('images', function() {
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-    // Caching images that ran through imagemin
-    .pipe(cache(imagemin({
-      interlaced: true,
-    })))
-    .pipe(gulp.dest('dist/images'))
-});
+// gulp.task('images', function() {
+//   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+//     // Caching images that ran through imagemin
+//     .pipe(cache(imagemin({
+//       interlaced: true,
+//     })))
+//     .pipe(gulp.dest('dist/images'))
+// });
 
 // Copying scripts
-gulp.task('scripts', function() {
-  return gulp.src('app/js/**/*')
-    .pipe(gulp.dest('dist/js'))
-})
+// gulp.task('scripts', function() {
+//   return gulp.src('app/js/**/*')
+//     .pipe(gulp.dest('dist/js'))
+// })
 
 // Cleaning
-gulp.task('clean', function() {
-  return del.sync('dist').then(function(cb) {
-    return cache.clearAll(cb);
-  });
-})
+// gulp.task('clean', function() {
+//   return del.sync('dist').then(function(cb) {
+//     return cache.clearAll(cb);
+//   });
+// })
 
-gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
-});
+// gulp.task('clean:dist', function() {
+//   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+// });
 
 // Build Sequences
 // ---------------
@@ -95,12 +95,12 @@ gulp.task('default', function(callback) {
   )
 })
 
-gulp.task('build', function(callback) {
-  runSequence(
-    'clean:dist',
-    'sass',
-    // ['useref', 'images', 'fonts'],
-    ['useref', 'images', 'scripts'],
-    callback
-  )
-})
+// gulp.task('build', function(callback) {
+//   runSequence(
+//     'clean:dist',
+//     'sass',
+//     // ['useref', 'images', 'fonts'],
+//     ['useref', 'images', 'scripts'],
+//     callback
+//   )
+// })
