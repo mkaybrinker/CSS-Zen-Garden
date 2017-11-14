@@ -2,16 +2,13 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync');
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
+// var useref = require('gulp-useref');
+// var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
+// var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-
+var browserSync = require('browser-sync');
 
 // Development Tasks
 // -----------------
@@ -26,81 +23,47 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('sass', function() {
-  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
+    	browsers: ['last 2 versions'],
+    	cascade: false
     })) // autoprefixer
-    .pipe(gulp.dest('app/css')) // Outputs it in the css folder
-    .pipe(browserSync.reload({ // Reloading with Browser Sync
+    .pipe(cssnano()) // for mini-fying CSS, leaving off for now
+    .pipe(browserSync.reload({
       stream: true
-    }))
-    .pipe(gulp.dest('dist/css'));
+  }))
+    .pipe(gulp.dest('')) // Outputs it in the root folder
 })
 
 // Watchers
 gulp.task('watch', ['browserSync', 'sass'], function() {
-  gulp.watch('app/scss/**/*.scss', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('scss/**/*.scss', ['sass'], browserSync.reload);
 })
 
 // Optimization Tasks
 // ------------------
 
-// Optimizing CSS and JavaScript
-gulp.task('useref', function() {
+// Optimizing CSS
+//gulp.task('useref', function() {
+//  return gulp.src('app/*.html')
+//    .pipe(useref())
+//    .pipe(gulpIf('*.css', cssnano()))
+//});
 
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'));
-});
-
-// Optimizing Images
-// gulp.task('images', function() {
-//   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-//     // Caching images that ran through imagemin
-//     .pipe(cache(imagemin({
-//       interlaced: true,
-//     })))
-//     .pipe(gulp.dest('dist/images'))
-// });
-
-// Copying scripts
-// gulp.task('scripts', function() {
-//   return gulp.src('app/js/**/*')
-//     .pipe(gulp.dest('dist/js'))
-// })
-
-// Cleaning
-// gulp.task('clean', function() {
-//   return del.sync('dist').then(function(cb) {
-//     return cache.clearAll(cb);
-//   });
-// })
-
-// gulp.task('clean:dist', function() {
-//   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
-// });
 
 // Build Sequences
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync'], 'watch',
+  runSequence(['sass'], 'watch',
     callback
   )
 })
 
-// gulp.task('build', function(callback) {
-//   runSequence(
-//     'clean:dist',
-//     'sass',
-//     // ['useref', 'images', 'fonts'],
-//     ['useref', 'images', 'scripts'],
-//     callback
-//   )
-// })
+//gulp.task('build', function(callback) {
+//  runSequence(
+//    'sass',
+//    callback
+//  )
+//})

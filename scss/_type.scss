@@ -22,6 +22,6 @@ a {
   color: $clickable;
   transition: color $hover-timing ease;
   &:hover {
-    color: darken($clickable, 6%);
+    color: darken($clickable, 30%);
   }
 }
