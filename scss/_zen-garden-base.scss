@@ -10,8 +10,8 @@
 
 /* basic elements */
 html {
-	margin: 0;
-	padding: 0;
+	margin: 10em;
+	padding: 10em
 	}
 body {
 	font: 75% georgia, sans-serif;
@@ -21,10 +21,12 @@ body {
 	margin: 0;
 	padding: 0;
 	}
+
 p {
-	margin-top: 0;
+	margin-top: 10px;
 	text-align: justify;
 	}
+
 h3 {
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px;
@@ -53,7 +55,7 @@ abbr {
 /* specific divs */
 .page-wrapper {
 	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
-	padding: 0 175px 0 110px;
+	padding: 0 500px 0 110px;
 	margin: 0;
 	position: relative;
 	}

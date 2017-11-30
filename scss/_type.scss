@@ -1,18 +1,26 @@
 body {
   font-size: 16px;
-  font-family: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
+  font-family: 'Roboto', Helvetica, Roboto, Arial, sans-serif;
   color: $text;
   margin: 0;
-  padding: 0;
+  padding: 5em;
 }
 
 h1 {
-
+ font-family: 'Roboto Slab', serif;
+ font-size: 70px;
+ text-transform: uppercase;
+ letter-spacing: 5px;
 }
 
 h2 {
-
+  font-family: 'Roboto Slab', serif;
+  color: #22517C;
 }
+
+h3 {
+  font-family: 'Roboto Slab', serif;
+  color: #DD5612;
 
 p {
   color: $text;
