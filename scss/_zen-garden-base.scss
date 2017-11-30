@@ -13,13 +13,14 @@ html {
 	margin: 10em;
 	padding: 10em
 	}
-body {
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753;
-	background: red url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
-	margin: 0;
-	padding: 0;
+
+body{
+	  font-size:30px;
+	  font-family:'Karla',Helvetica,Arial,sans-serif;
+	  color:#6C448C;
+	  margin:0;
+	  padding:10em;
+	  background-color:#D6A5EF;
 	}
 
 p {
@@ -27,12 +28,30 @@ p {
 	text-align: justify;
 	}
 
-h3 {
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px;
-	margin-bottom: 0;
-	color: #7D775C;
+	h1{
+	    font-family: 'Fjalla One', sans-serif;
+	    color: #EE534A;
+	    font-size: 100pt;
+	    text-align: left;
+	    line-height: 100%;
+	    letter-spacing: 5px;
+	    padding:0;
 	}
+
+	h2{
+	  font-size:50px;
+	  letter-spacing: 5px;
+	  padding:0;
+	}
+
+	h2, h3, h4{
+	      font-family:'Fjalla One',serif;
+	      letter-spacing: 5px;
+	      text-transform: uppercase;
+	      font-size:40px;
+	      color:white;
+	  }
+
 a:link {
 	font-weight: bold;
 	text-decoration: none;
@@ -63,8 +82,8 @@ abbr {
 .intro {
 	min-width: 470px;
 	width: 100%;
-	}
 
+}
 header h1 {
 	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
 	margin-top: 10px;

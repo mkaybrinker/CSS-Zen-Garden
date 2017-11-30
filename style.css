@@ -1,1 +1,82 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}.clearfix{zoom:1}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}body{font-size:16px;font-family:Roboto,Helvetica,Arial,sans-serif;color:#343741;margin:0;padding:5em}h1{font-size:70px;text-transform:uppercase;letter-spacing:5px}h1,h2{font-family:Roboto Slab,serif}p{color:#343741}a{color:blue;transition:color .5s ease}a:hover{color:#006}a.button,button{box-sizing:border-box;border:none;display:block;background-color:blue;color:#fff;text-align:center;cursor:pointer;transition:background-color .5s ease;line-height:1.2em;max-width:300px}a.button:hover,button:hover{background-color:#0000e0}h1{color:blue}
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
+html{
+  box-sizing:border-box
+  }*,:after,:before{box-sizing:inherit}.clearfix{zoom:1}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}
+
+body{
+  font-size:30px;
+  font-family:'Karla',Helvetica,Arial,sans-serif;
+  color:#6C448C;
+  margin:0;
+  padding:10em;
+  background-color:#D6A5EF;
+}
+
+.page-wrapper {
+	/*background-color: red;*/
+  width:60%;
+  padding-left:10px;
+	margin: 0;
+	position: center;
+}
+
+
+/*h1{
+    font-size:70px;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    color: #EA651B;
+  }*/
+
+h1{
+    font-family: 'Fjalla One', sans-serif;
+    color: #EE534A;
+    font-size: 100pt;
+    text-align: left;
+    line-height: 100%;
+    letter-spacing: 5px;
+    padding:0;
+}
+
+h2{
+  font-size:50px;
+  letter-spacing: 5px;
+  padding:0;
+}
+
+h2, h3, h4{
+      font-family:'Fjalla One',serif;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-size:40px;
+      color:white;
+  }
+
+p{
+  color:#343741;
+  }
+
+a{
+  color:#EA651B;
+  text-decoration: none;
+  }
+
+a:hover{
+  color:#EA651B;
+    transition: color:#white .5s ease;
+  text-transform: uppercase;
+  font-size:25px;
+  }
+
+a.button,button{
+    box-sizing:border-box;
+    border:none;
+    display:block;
+    background-color:#EA651B;
+    color:#fff;
+    text-align:center;
+    cursor:pointer;
+    transition:background-color .5s ease;
+    line-height:1.2em;
+    max-width:300px
+  }
